@@ -9,7 +9,7 @@ describe ('Cypress basics', () => {
         Cy.pause()
        cy.title()
        .should('be.equal', 'Campo de Treinamento')
-       .and('contain','Campo')
+       .and('contain','Campo').debug()
     })
     it('Should Interact with an element', () => {
         cy.visit('https://wcaquino.me/cypress/componentes.html')
