@@ -37,5 +37,17 @@ describe ('Work with basic elements', () => {
         cy.get('#buttonDelay').click()
         cy.get('#novoCampo', {timeout: 30000}).should('exist')
     });
+     it('Click retry', () => {
+        cy.get('#buttonCount')
+        .click()
+        .should("have.value", '1')
 
+     });
+     it('should vs then', () => {
+        cy.get('#buttonListDOM').then($el =>{
+            
+            expect($el).to.have.length(1)
+        }).and('have.id', 'buttonListDOM')
+
+     });
 })
