@@ -1,15 +1,20 @@
-const getSomething = callback => {
-    setTimeout(() =>{
-        callback (11);
-    }, 1000)
-
+const getSomething = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() =>{
+            resolve (11);
+        }, 1000)
+    })
 }
 
 
-const system = () => {
+const system = async () => {
     console.log('init');
-    getSomething(some => console.log('Something is  ${some} '));
-    console.log('end')
+    const some = await getSomething()
+    console.log('Something is  ${some} ')
+    
+      
+      console.log('end')
+  
 }
 
 system()
