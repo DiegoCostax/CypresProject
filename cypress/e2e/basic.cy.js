@@ -14,8 +14,14 @@ describe ('Cypress basics', () => {
         .should('be.equal', 'Campo de Treinamento')
         .and('contain', 'Campo')
 
+        let syncTitle 
+
         cy.title().then(title =>{
             console.log(title)
+
+            cy.get("#formNome").type(title)
+
+            syncTitle = title
         })
 
     })
