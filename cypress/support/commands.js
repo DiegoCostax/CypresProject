@@ -100,12 +100,12 @@ Cypress.Commands.overwrite('request', (originalFn, ...options) => {
 })
 
 Cypress.Commands.add('loginFast', (user, passwd) => {
-    cy.visit('https://barrigareact.wcaquino.me/')
+    cy.visit('http://barrigareact.wcaquino.me/')
     cy.getToken(user, passwd).then(token => {
         cy.window().then(win => {
             win.locatorsalStorage.setItem('@barriga/user', user)
             win.locatorsalStorage.setItem('@barriga/token', token)
         })
     })
-    cy.visit('https://barrigareact.wcaquino.me/')
+    cy.visit('http://barrigareact.wcaquino.me/')
 })
