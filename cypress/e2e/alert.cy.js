@@ -66,7 +66,7 @@ describe('Work with alerts', () => {
                 expect(msg).to.equal(":D")
              })
    })
-        it.only('Desafio', () => {
+        it('Desafio', () => {
             //Stub vai representar o evento 'Alerta'
             const stub = cy.stub().as('alerta')
             //Cy.on com o window + alert com stub, vai trazer no console a descrição do alerta ajudando assim a ter a validação do texto
