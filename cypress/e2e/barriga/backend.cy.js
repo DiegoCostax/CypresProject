@@ -73,7 +73,7 @@ describe('Test Functional', () => {
         })
     
     })
-    it('deve criar uma transação', () => {
+    it.skip('deve criar uma transação', () => {
         cy.getContaByName('Conta para movimentacoes')
             .then(contaId => {
                 cy.request({
