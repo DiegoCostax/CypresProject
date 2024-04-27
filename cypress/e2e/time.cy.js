@@ -19,7 +19,7 @@ describe('Work with alerts', () => {
         cy.get('#buttonNow').click()
         cy.get('#resultado > span').should('contain', '10/04/2012')
     })
-    it.only('Goes to the future', () => {
+    it('Goes to the future', () => {
         cy.get('#buttonTimePassed').click()
         cy.get('#resultado > span').should('contain', '15731')
         cy.get('#resultado > span').invoke('text').should('gt', 15731929)
