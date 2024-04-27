@@ -62,7 +62,7 @@ describe ('Work with basic elements', () => {
 
         cy.get("[name='formSexo']").should("have.length" , 2)
     });
-    it.skip('Checkbox', () => {
+    it('Checkbox', () => {
         cy.get('#formComidaPizza')
         .click()
         .should('be.checked')
